@@ -1,25 +1,14 @@
-# beers-vue-app
+# brewdog catalogue app
 
-## Project setup
-```
-yarn install
-```
+### Project setup
 
-### Compiles and hot-reloads for development
-```
+1. Clone the project
+2. Run
+`yarn install
+`
+3. Run 
+`
 yarn serve
-```
+`
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# brewdog
+4. Go to https://localhost:8080 . You're ready to go! 🚀
