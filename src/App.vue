@@ -85,7 +85,7 @@
         }
 
         &.container--small {
-            padding: 1em 7em;
+            padding: 1em 10%;
         }
     }
 </style>

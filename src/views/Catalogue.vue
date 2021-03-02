@@ -101,6 +101,10 @@
     .catalogue__beer__button {
         position: absolute;
         right: 0;
+
+        i:hover {
+            cursor: pointer;
+        }
     }
 
     .catalogue__beer {
@@ -119,6 +123,11 @@
         font-family: $secondary-font;
         color: $grey;
         border-bottom: 2px solid $grey;
+        padding: 0 0 0.5em 0.5em;
+
+        &:focus {
+            outline: none;
+        }
     }
 </style>
 
