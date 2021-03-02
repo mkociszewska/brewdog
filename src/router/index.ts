@@ -11,12 +11,39 @@ const routes: RouteConfig[] = [
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/catalogue',
+    name: 'Catalogue',
+    meta: { darkMode: false },
+    component: () => import(/* webpackChunkName: "catalogue" */ '../views/Catalogue.vue'),
+  },
+  {
+    path: '/favourites',
+    name: 'Favourites',
+    component: () => import(/* webpackChunkName: "favourites" */ '../views/Favourites.vue'),
+  },
+  {
+    path: '/deciding',
+    name: 'HardTimeDeciding',
+    meta: { darkMode: false },
+    component: () => import(/* webpackChunkName: "deciding  " */ '../views/HardTimeDeciding.vue'),
+  },
+  {
+    path: '/strongest',
+    name: 'StrongestBeers',
+    meta: { containerSmall: true },
+    component: () => import(/* webpackChunkName: "strongest" */ '../views/StrongestBeers.vue'),
+  },
+  {
+    path: '/mildest',
+    name: 'MildestBeers',
+    meta: { containerSmall: true },
+    component: () => import(/* webpackChunkName: "mildest" */ '../views/MildestBeers.vue'),
+  },
+  {
+    path: '/compromise',
+    name: 'CompromiseBeers',
+    meta: { containerSmall: true },
+    component: () => import(/* webpackChunkName: "compromise" */ '../views/CompromiseBeers.vue'),
   },
 ];
 
@@ -24,6 +51,7 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+
 });
 
 export default router;
