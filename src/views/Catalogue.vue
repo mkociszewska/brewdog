@@ -27,8 +27,8 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import { Beer } from '@/api/models/beer';
-  import BrewdogService from '@/api/brewdog';
+  import { Beer } from '@/api/models/beer'
+  import BrewdogService from '@/api/brewdog'
   import store from '@/store'
 
   @Component
@@ -59,10 +59,9 @@
     }
 
     async searchInBeers() {
-      if(this.search === '' || this.search == null || !this.search) {
+      if (this.search === '' || this.search == null || !this.search) {
         this.filteredBeers = this.beers
-      }
-      else {
+      } else {
         this.filteredBeers = this.beers.filter((beer: Beer) => {
           return beer.name.toLowerCase().includes(this.search.toLowerCase())
             || beer.tagline.toLowerCase().includes(this.search.toLowerCase())
@@ -71,8 +70,8 @@
     }
 
     addToFavorites(beerId: number) {
-      store.dispatch('addFavourites', beerId);
-      this.getFavourites();
+      store.dispatch('addFavourites', beerId)
+      this.getFavourites()
       this.mergeFavourites()
     }
 

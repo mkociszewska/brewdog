@@ -7,7 +7,7 @@ export class Beer {
     public imageUrl: string,
     public abv: number,
     public ibu: number,
-    public favourite: boolean
+    public favourite: boolean,
   ) {
 
     // @ts-ignore
@@ -27,7 +27,7 @@ export class Beer {
       data.image_url,
       data.abv,
       data.ibu,
-      false
+      false,
     )
   }
 }

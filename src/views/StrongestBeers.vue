@@ -12,11 +12,12 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import { Beer } from '@/api/models/beer';
-  import BrewdogService from '@/api/brewdog';
-  import BaseHeader from '@/components/BaseHeader.vue';
+  import { Beer } from '@/api/models/beer'
+  import BrewdogService from '@/api/brewdog'
+  import BaseHeader from '@/components/BaseHeader.vue'
+
   @Component({
-    components: {BaseHeader}
+    components: { BaseHeader },
   })
   export default class StrongestBeers extends Vue {
     beers: Beer[] = []
@@ -33,8 +34,8 @@
     sortBeersByABV() {
       this.strongestBeers =
         this.beers.sort((a, b) =>
-          (a.abv < b.abv) ? 1: -1
-        ).slice(0, this.itemsNumber)
+          (a.abv < b.abv) ? 1 : -1,
+        ).splice(0, this.itemsNumber)
     }
   }
 </script>

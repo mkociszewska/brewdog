@@ -1,14 +1,12 @@
-import Vue from 'vue';
-import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/Home.vue';
+import Vue from 'vue'
+import VueRouter, { RouteConfig } from 'vue-router'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    redirect: '/catalogue',
   },
   {
     path: '/catalogue',
@@ -45,13 +43,12 @@ const routes: RouteConfig[] = [
     meta: { containerSmall: true },
     component: () => import(/* webpackChunkName: "compromise" */ '../views/CompromiseBeers.vue'),
   },
-];
+]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+})
 
-});
-
-export default router;
+export default router

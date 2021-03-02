@@ -32,15 +32,13 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import { Beer } from '@/api/models/beer'
-  import BrewdogService from '@/api/brewdog'
   import BaseHeader from '@/components/BaseHeader.vue'
-  import IconFire from '@/components/Icons/IconFire.vue';
-  import IconBalance from '@/components/Icons/IconBalance.vue';
-  import IconTongue from '@/components/Icons/IconTongue.vue';
+  import IconFire from '@/components/Icons/IconFire.vue'
+  import IconBalance from '@/components/Icons/IconBalance.vue'
+  import IconTongue from '@/components/Icons/IconTongue.vue'
 
   @Component({
-    components: {IconTongue, IconBalance, IconFire, BaseHeader}
+    components: {IconTongue, IconBalance, IconFire, BaseHeader},
   })
   export default class HardTimeDeciding extends Vue {
 

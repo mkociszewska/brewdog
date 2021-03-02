@@ -22,7 +22,7 @@
   import BaseHeader from '@/components/BaseHeader.vue'
 
   @Component({
-    components: {BaseHeader}
+    components: {BaseHeader},
   })
   export default class LowestIBUBeers extends Vue {
     beers: Beer[] = []
@@ -39,9 +39,9 @@
     }
 
     checkIfHasIBU() {
-      for( let i = 0; i < this.beers.length; i++){
+      for (let i = 0; i < this.beers.length; i++) {
         if ( this.beers[i].ibu == null) {
-          this.beers.splice(i, 1);
+          this.beers.splice(i, 1)
         }
       }
     }
@@ -49,7 +49,7 @@
     sortBeersByABV() {
       this.mildestBeers =
         this.beers.sort((a, b) =>
-          (a.ibu > b.ibu) ? 1: -1
+          (a.ibu > b.ibu) ? 1 : -1,
         ).slice(0, this.itemsNumber)
     }
   }

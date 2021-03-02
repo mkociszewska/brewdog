@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts">
-  import { Component, Prop, Vue } from 'vue-property-decorator';
+  import { Component, Prop, Vue } from 'vue-property-decorator'
 
-    @Component
-    export default class BaseHeader extends Vue {
-      @Prop({ required: true }) title!: string
-      @Prop({ required: true }) subtitle!: string
-    }
+  @Component
+  export default class BaseHeader extends Vue {
+    @Prop({ required: true }) title!: string
+    @Prop({ required: true }) subtitle!: string
+  }
 </script>
 
 <style lang="scss">

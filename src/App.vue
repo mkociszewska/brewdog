@@ -10,19 +10,19 @@
 <script lang="ts">
     import { Component, Vue, Watch } from 'vue-property-decorator'
     import { Route } from 'vue-router'
-    import Nav from '@/components/Nav'
+    import Nav from '@/components/Nav.vue'
 
     @Component({
-        components: { Nav }
+        components: { Nav },
     })
     export default class App extends Vue {
-      darkMode: boolean = true;
-      containerSmall: boolean = false;
+      darkMode: boolean = true
+      containerSmall: boolean = false
 
       @Watch('$route')
       onRouteChange(to: Route) {
-        this.darkMode = to.meta.darkMode ?? true;
-        this.containerSmall = to.meta.containerSmall ?? true;
+        this.darkMode = to.meta.darkMode ?? true
+        this.containerSmall = to.meta.containerSmall ?? true
       }
     }
 </script>
@@ -41,17 +41,13 @@
         url(./assets/fonts/SofiaProBold.ttf) format("truetype");
     }
     #app {
-        /*font-family: Roboto, Helvetica, Arial, sans-serif;*/
         font-family: Veneer;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        /*background-color: #f2f2f2;*/
         font-size: 16px;
         font-weight: normal;
-
-
     }
 
     body {
