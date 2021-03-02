@@ -35,11 +35,13 @@
         src: local("Veneer"),
         url(./assets/fonts/Veneer.ttf) format("truetype");
     }
+
     @font-face {
         font-family: "Sofia Pro";
         src: local("SofiaProBold"),
         url(./assets/fonts/SofiaProBold.ttf) format("truetype");
     }
+
     #app {
         font-family: Veneer;
         -webkit-font-smoothing: antialiased;
@@ -74,8 +76,6 @@
 
     .container {
         margin-top: $nav-height;
-        /*padding: 1em 2em;*/
-        /*max-width: 1140px;*/
         min-height: 100vh;
         background-color: #f2f2f2;
 
@@ -88,5 +88,4 @@
             padding: 1em 7em;
         }
     }
-
 </style>

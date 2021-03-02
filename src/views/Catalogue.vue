@@ -6,8 +6,6 @@
         </div>
 
         <div class="catalogue__wrapper">
-            {{ this.favouriteBeers }}
-
             <div v-for="beer in filteredBeers" class="catalogue__beer">
                 <div class="catalogue__beer__button">
                     <button v-if="beer.favourite" @click="removeFromFavorites(beer.id)">
@@ -73,12 +71,15 @@
       store.dispatch('addFavourites', beerId)
       this.getFavourites()
       this.mergeFavourites()
+      this.filteredBeers = this.beers
+
     }
 
     removeFromFavorites(beerId: number) {
       store.dispatch('removeFavourites', beerId)
       this.getFavourites()
       this.mergeFavourites()
+      this.filteredBeers = this.beers
     }
   }
 </script>
@@ -89,12 +90,12 @@
     .catalogue__wrapper {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 17px;
-        grid-row-gap: 30px;
+        grid-column-gap: 3em;
+        grid-row-gap: 5em;
     }
 
     .beer-image {
-        height: 15em;
+        height: 40vh;
     }
 
     .catalogue__beer__button {
