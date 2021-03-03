@@ -46,11 +46,7 @@
     }
 
     checkIfHasIBU() {
-      for ( let i = 0; i < this.beers.length; i++) {
-        if ( this.beers[i].ibu == null) {
-          this.beers.splice(i, 1)
-        }
-      }
+      this.beers = this.beers.filter((beer: Beer) => beer.ibu != null);
     }
 
     sortBeersByABV() {
